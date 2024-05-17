@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_params_cat_params",
+  "info": {
+    "displayName": "params",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "advertismets",
+  "info": {
+    "singularName": "advertismet",
+    "pluralName": "advertismets",
+    "displayName": "advertismet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "imgs": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cat": {
+      "displayName": "params",
+      "type": "component",
+      "repeatable": true,
+      "component": "params-cat.params"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "advertismets"
+    }
+  }
+}
