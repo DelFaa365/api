@@ -800,7 +800,7 @@ export interface ApiAdvertismetAdvertismet extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
+    nameOfAd: Attribute.String;
     desc: Attribute.String;
     imgs: Attribute.Media;
     cat: Attribute.Component<'params-cat.params', true>;
@@ -809,6 +809,13 @@ export interface ApiAdvertismetAdvertismet extends Schema.CollectionType {
       'manyToMany',
       'api::category.category'
     >;
+    type: Attribute.String;
+    typeOfVehicle: Attribute.String;
+    yearOfVehicle: Attribute.String;
+    brandOfVehicle: Attribute.String;
+    modelOfVehicle: Attribute.String;
+    phone: Attribute.Integer;
+    price: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -833,6 +840,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     singularName: 'category';
     pluralName: 'categories';
     displayName: 'category';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -845,6 +853,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'manyToMany',
       'api::advertismet.advertismet'
     >;
+    img: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

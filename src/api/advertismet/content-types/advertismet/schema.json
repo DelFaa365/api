@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "nameOfAd": {
       "type": "string"
     },
     "desc": {
@@ -40,6 +40,27 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "advertismets"
+    },
+    "type": {
+      "type": "string"
+    },
+    "typeOfVehicle": {
+      "type": "string"
+    },
+    "yearOfVehicle": {
+      "type": "string"
+    },
+    "brandOfVehicle": {
+      "type": "string"
+    },
+    "modelOfVehicle": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "decimal"
     }
   }
 }
